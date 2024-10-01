@@ -1,4 +1,4 @@
-NAME = libft.a
+NAME = my_libc.a
 CC = cc
 INCLUDES = incs
 CFLAGS = -Wall -Wextra -Werror -I $(INCLUDES)
@@ -10,7 +10,8 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar -rcs $(NAME) $(OBJECTS)
+	@ar -rcs $(NAME) $(OBJECTS)
+	@echo "libc created"
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $(dir $@)
