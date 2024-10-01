@@ -73,7 +73,7 @@ static void	fill_matrix(char *str, char *charset, char **arr)
 	}
 }
 
-char	**my_split(char *str, char *charset)
+char	**my_split_charset(char *str, char *charset)
 {
 	char	**arr;
 	size_t	words;

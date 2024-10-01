@@ -39,7 +39,7 @@ static int	get_bytes(int i, int size, char **strs)
 	return (bytes);
 }
 
-char	*my_strjoin(int size, char **strs, char *sep)
+char	*my_strjoin_matrix(int size, char **strs, char *sep)
 {
 	char	*str;
 	int		bytes;
