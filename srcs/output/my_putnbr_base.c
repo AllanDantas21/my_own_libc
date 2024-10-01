@@ -1,15 +1,5 @@
 #include "my_libc.h"
 
-int	my_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 int	my_check_base(char *base)
 {
 	int	i;

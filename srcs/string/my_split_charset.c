@@ -1,23 +1,5 @@
 #include "my_libc.h"
 
-static char	*my_substr(char *str, unsigned int start, int len)
-{
-	char	*substr;
-	int		i;
-
-	substr = malloc(sizeof(char) * (len + 1));
-	if (!substr)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		substr[i] = str[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
-}
-
 static int	has_on_charset(char c, char *charset)
 {
 	while (*charset)

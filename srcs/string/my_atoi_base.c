@@ -1,16 +1,6 @@
 #include "my_libc.h"
 
-int	my_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	convert_base(char *str, int i, char *base)
+static int	convert_base(char *str, int i, char *base)
 {
 	int	res;
 	int	base_len;
@@ -37,7 +27,7 @@ int	convert_base(char *str, int i, char *base)
 	return (res);
 }
 
-int	my_check_base(const char *base)
+static int	my_check_base(const char *base)
 {
 	int	i;
 	int	j;
@@ -61,7 +51,7 @@ int	my_check_base(const char *base)
 	return (1);
 }
 
-int	check_sign(const char *str, int *i, int *sign)
+static int	check_sign(const char *str, int *i, int *sign)
 {
 	while (str[*i] == '-' || str[*i] == '+')
 	{
@@ -101,4 +91,4 @@ void test_my_atoi_base(char *str, char *base, int expected)
 	else
 		printf("Test failed for input '%s' with base '%s'. 
 	Expected: %d, Got: %d\n", str, base, expected, result);
-}
+}*/
