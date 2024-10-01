@@ -2,7 +2,7 @@ NAME = my_libc.a
 CC = cc
 INCLUDES = incs
 CFLAGS = -Wall -Wextra -Werror -I $(INCLUDES)
-FILES = $(shell find . -name "*.c")
+FILES = $(shell find . -name "*.c" ! -name "tests.c")
 OBJDIR = objs
 OBJECTS = $(patsubst %.c, $(OBJDIR)/%.o, $(FILES))
 RM = rm -f
@@ -20,6 +20,10 @@ $(OBJDIR)/%.o: %.c
 clean:
 	$(RM) $(OBJECTS)
 	$(RM) -r $(OBJDIR)
+
+test: $(NAME)
+	$(CC) $(CFLAGS) tests.c $(NAME) -o tests
+	./tests
 
 fclean: clean
 	$(RM) $(NAME)

@@ -1,18 +1,13 @@
 #include "my_libc.h"
 
-int	my_strncmp(const char *s1, const char *s2, size_t n)
+int	my_strncmp(const char *restrict s1, const char *restrict s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*one;
-	unsigned char	*two;
+	size_t			i = 0;
 
-	i = 0;
-	one = (unsigned char *)s1;
-	two = (unsigned char *)s2;
-	while ((one[i] || two[i]) && i < n)
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (one[i] != two[i])
-			return (one[i] - two[i]);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
 	return (0);
