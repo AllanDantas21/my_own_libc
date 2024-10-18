@@ -1,8 +1,5 @@
 
-Memória atualizada
-Aqui está um modelo para o seu README:
-
-My Own Libc
+#My Own Libc
 Welcome to My Own Libc, a project where I am recreating a subset of functions from the C standard library. This is a personal project to deepen my understanding of low-level programming, memory management, and system calls in C.
 
 Project Overview
@@ -58,4 +55,4 @@ my_own_libc/
 ├── Makefile         # Build script
 └── README.md        # Project documentation
 Contributing
-This is a personal learning project, but feel free to submit issues or suggestions! Contributions are welcome.
+This is a personal learning project, but feel free to submit issues or suggestions! Contributions are welcome._
