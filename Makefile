@@ -27,6 +27,7 @@ test: $(NAME)
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) tests
 
 re: fclean all
 
