@@ -2,10 +2,19 @@
 
 void	*my_bzero(void *s, size_t n)
 {
-	char	*a;
+	uint64_t	*long_ptr;
+	uint8_t		*byte_ptr;
+	size_t		i;
 
-	a = s;
-	while (n--)
-		*a++ = 0;
+	long_ptr = (uint64_t *)s;
+	i = n / sizeof(uint64_t);
+	while (i--)
+		*long_ptr++ = 0;
+
+	byte_ptr = (uint8_t *)long_ptr;
+	i = n % sizeof(uint64_t);
+	while (i--)
+		*byte_ptr++ = 0;
+
 	return (s);
 }
