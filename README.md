@@ -33,9 +33,9 @@ my_own_libc/
 ├── src/             # Source files (.c) with function implementations
 │   ├── memory/      # Memory-related functions (e.g., malloc, memset)
 │   ├── string/      # String manipulation functions (e.g., strlen, strcpy)
-    ├── lists/       #
-    ├── output/      # 
-    ├── tab/         #
+|   ├── lists/       #
+|   ├── output/      # 
+|   ├── tab/         #
 │
 ├── obj/             # Object files (.o) generated during compilation
 │   └── (Populated after running `make`)
