@@ -31,11 +31,12 @@ my_own_libc/
 │   └── my_libc.h    # Main header file with all function declarations
 │
 ├── src/             # Source files (.c) with function implementations
+│   ├── btree/       # btree-related functions
 │   ├── memory/      # Memory-related functions (e.g., malloc, memset)
 │   ├── string/      # String manipulation functions (e.g., strlen, strcpy)
-|   ├── lists/       #
-|   ├── output/      # 
-|   ├── tab/         #
+│   ├── lists/       #
+│   ├── output/      # 
+│   ├── tab/         #
 │
 ├── obj/             # Object files (.o) generated during compilation
 │   └── (Populated after running `make`)
