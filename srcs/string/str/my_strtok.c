@@ -23,7 +23,7 @@ char  *my_strpbrk(char *s, const char *accept)
 char *my_strtok(char *s, const char *delim)
 {
     static char *last = NULL;
-    char *token;
+    char        *token;
 
     if (s == NULL)
         s = last;
@@ -31,8 +31,18 @@ char *my_strtok(char *s, const char *delim)
     if (*s == '\0')
     {
         last = NULL;
-        return (NULL);
+        return NULL;
     }
     token = s;
     s = my_strpbrk(token, delim);
+    if (s)
+    {
+        *s = '\0';
+        last = s + 1;
+    }
+    else
+    {
+        last = NULL;
+    }
+    return (token);
 }
