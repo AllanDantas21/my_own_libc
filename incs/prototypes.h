@@ -63,5 +63,6 @@ int     my_print_decimal(int decimal);
 int     my_print_char(char c);
 char	*utoa_base(unsigned long long n, int base, char *chr);
 
+// math functions
 
 #endif
