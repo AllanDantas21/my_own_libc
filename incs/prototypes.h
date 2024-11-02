@@ -16,6 +16,7 @@ int		my_memcmp(const void *s1, const void *s2, size_t n);
 int     my_atoi_base(char *str, char *base);
 int		my_lstsize(t_list *lst);
 int     my_count_matrix(char **matrix);
+int     flood_fill(int x, int y, char **map);
 char	*my_strnstr(const char *big, const char *little, size_t len);
 char	*my_substr(char const *s, unsigned int start, size_t len);
 char	*my_strmapi(char const *s, char (*f)(unsigned int, char));
