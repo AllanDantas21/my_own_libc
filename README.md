@@ -34,14 +34,15 @@ my_own_libc/
 │   ├── btree/       # btree-related functions
 │   ├── memory/      # Memory-related functions (e.g., malloc, memset)
 │   ├── string/      # String manipulation functions (e.g., strlen, strcpy)
-│   ├── lists/       #
+│   ├── lists/       # Lists-related functions
 │   ├── output/      # 
 │   ├── tab/         #
 │
 ├── obj/             # Object files (.o) generated during compilation
 │   └── (Populated after running `make`)
 │
-├── tests.c          # Sample test code
+├── tests/           # implement tests  
+│   └── tests.c      # Sample test code
 ├── Makefile         # Build script to compile the library
 ├── LICENSE          # License for the project
 └── README.md        # Project documentation
