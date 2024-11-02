@@ -14,7 +14,7 @@ cd my_own_libc
 ## Usage
 
 ```c
-#include "my_libc.h"
+#include "my_own_libc/incs/my_libc.h"
 
 int main() {
     char str[] = "Hello, World!";
