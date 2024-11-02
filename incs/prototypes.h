@@ -53,7 +53,7 @@ void	my_lstclear(t_list **lst, void (*del)(void *));
 void	my_lstadd_front(t_list **lst, t_list *new);
 
 // printf functions
-int     my_print_address(void *pointer);
+int     my_printf_address(void *pointer);
 int     my_print_unsigned(unsigned int n);
 int     my_print_string(const char *str);
 int     my_print_hexa(unsigned int n);

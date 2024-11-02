@@ -1,6 +1,6 @@
 #include "my_libc.h"
 
-int	my_print_address(void *pointer)
+int	my_printf_address(void *pointer)
 {
 	int					counter;
 	char				*str;

@@ -12,7 +12,7 @@ static int	my_print_fmt(const char arg, va_list ap)
 	else if (arg == 's')
 		count += my_print_string(va_arg(ap, char *));
 	else if (arg == 'p')
-		count += my_print_address(va_arg(ap, void *));
+		count += my_printf_address(va_arg(ap, void *));
 	else if (arg == 'u')
 		count += my_print_unsigned(va_arg(ap, unsigned int));
 	else if (arg == 'x')
