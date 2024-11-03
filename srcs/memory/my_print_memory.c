@@ -34,7 +34,7 @@ static void my_hex_content(unsigned char *addr, unsigned int limit);
  * @param limit The number of bytes to be printed.
  */
 static void my_print_chars(unsigned char *addr, unsigned int limit);
-
+ 
 /**
  * @brief Adjusts the limit for memory printing.
  *
@@ -46,7 +46,7 @@ static void my_print_chars(unsigned char *addr, unsigned int limit);
  * @param size The total size of the memory.
  * @return The adjusted limit for memory printing.
  */
- 
+
 static unsigned int adjust_limit(unsigned int i, unsigned int size);
 
 static void	my_print_address(unsigned long addr)
