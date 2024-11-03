@@ -15,26 +15,18 @@
  * @return Pointer to the destination memory area (`dest`).
  */
 
-void	*my_memmove(void *dest, const void *src, size_t n)
-{
-	char	*d;
-	char	*s;
-
-	d = (char *) dest;
-	s = (char *) src;
-	if (!dest && !src)
-		return (0);
-	if (dest <= src)
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	else if (dest > src)
-	{
-		d += n - 1;
-		s += n - 1;
-		while (n--)
-			*d-- = *s--;
-	}
-	return (dest);
+void * memmove(void *dst, const void *src, size_t len){
+    uint8_t			*dp = (uint8_t *)dst;
+    const uint8_t	*sp = (const uint8_t *)src;
+    
+    if(sp < dp && sp + len > dp){
+        sp += len;
+        dp += len;
+        while(len-- > 0)
+            *--dp = *--sp;}
+		else{
+        while(len-- > 0)
+            *dp++ = *sp++;
+    }
+    return (dst);
 }
