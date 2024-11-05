@@ -1,5 +1,17 @@
 #include "my_libc.h"
 
+/**
+ * @file my_putnbr_fd.c
+ * @brief Outputs an integer to the given file descriptor.
+ *
+ * This function takes an integer and a file descriptor as input and writes
+ * the integer to the file descriptor. It handles negative numbers and the
+ * minimum integer value.
+ *
+ * @param n The integer to be written.
+ * @param fd The file descriptor to which the integer will be written.
+ */
+ 
 void	my_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
