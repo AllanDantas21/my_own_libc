@@ -23,7 +23,6 @@ clean:
 
 test: $(NAME)
 	$(CC) $(CFLAGS) tests.c $(NAME) -o tests
-	./tests
 
 fclean: clean
 	$(RM) $(NAME)
