@@ -24,8 +24,9 @@ void * memmove(void *dst, const void *src, size_t len){
         dp += len;
         while(len-- > 0)
             *--dp = *--sp;}
-		else{
-        while(len-- > 0)
+		else
+    {
+      while(len-- > 0)
             *dp++ = *sp++;
     }
     return (dst);
