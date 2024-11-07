@@ -1,4 +1,4 @@
-#include "my_libc.h"
+#include "../../incs/my_libc.h"
 
 /**
  * @file my_memmove.c
@@ -15,19 +15,20 @@
  * @return Pointer to the destination memory area (`dest`).
  */
 
-void * memmove(void *dst, const void *src, size_t len){
-    uint8_t			*dp = (uint8_t *)dst;
-    const uint8_t	*sp = (const uint8_t *)src;
+void *my_memmove(void *dst, const void *src, size_t len){
+  uint8_t			*dp = (uint8_t *)dst;
+  const uint8_t	*sp = (const uint8_t *)src;
     
-    if(sp < dp && sp + len > dp){
-        sp += len;
-        dp += len;
-        while(len-- > 0)
-            *--dp = *--sp;}
-		else
-    {
+  if(sp < dp && sp + len > dp)
+  {
+      sp += len;
+      dp += len;
       while(len-- > 0)
-            *dp++ = *sp++;
+        *--dp = *--sp;
+  }
+	else {
+    while(len-- > 0)
+        *dp++ = *sp++;
     }
     return (dst);
 }

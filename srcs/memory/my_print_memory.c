@@ -1,4 +1,4 @@
-#include "my_libc.h"
+#include "../../incs/my_libc.h"
 
 /**
  * @brief Prints the memory address in hexadecimal format.
@@ -153,4 +153,5 @@ int main() {
 	qu'on peutfaire avec\t\n\tprint_memory\n\nlol.lol\n ";
 	my_print_memory((void *)str, sizeof(str));
 	return 0;
-}*/
+
+dl*/
