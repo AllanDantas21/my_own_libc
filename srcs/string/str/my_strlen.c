@@ -1,11 +1,10 @@
 #include "my_libc.h"
-
 size_t	my_strlen(const char *s)
 {
-	size_t	len;
-
-	len = 0;
-	while (*s++)
-		len++;
-	return (len);
+	if (s == NULL)
+		return (0);
+	const char *start = s;
+	while (*s)
+		s++;
+	return (s - start);
 }
