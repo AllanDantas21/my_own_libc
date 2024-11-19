@@ -8,7 +8,7 @@ char	*my_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	s_len = my_strlen(s);
 	if (start >= s_len)
-		return (strdup(""));
+		return (my_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
 	sub = (char *)malloc((len + 1) * sizeof(char));
