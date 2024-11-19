@@ -1,5 +1,17 @@
 #include "my_libc.h"
 
+/**
+ * my_atoi_base - Converts a string to an integer using a specified base.
+ * @str: The string to be converted.
+ * @base: The base to be used for conversion.
+ *
+ * This function converts the initial portion of the string pointed to by str 
+ * to an integer value according to the given base. The base must be a valid 
+ * base string, and the function checks for valid characters and signs.
+ *
+ * Return: The converted integer value, or 0 if the input string or base is invalid.
+ */
+
 static int	convert_base(char *str, int i, char *base)
 {
 	int	res;
