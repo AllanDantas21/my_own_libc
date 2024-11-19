@@ -2,19 +2,12 @@
 
 char	*my_strdup(const char *s)
 {
-	char	*s1;
-	char	*s2;
-	char	*pos;
+	size_t	len = my_strlen(s);
+	char	*dup = (char *)malloc(sizeof(char) * (len + 1));
 
-	s1 = (char *)s;
-	s2 = (char *)malloc(sizeof(char) * (my_strlen(s) + 1));
-	if (!s2)
+	if (!dup)
 		return (NULL);
-	pos = s2;
-	while (*s1)
-	{
-		*s2++ = *s1++;
-	}
-	*s2 = 0;
-	return (pos);
+	my_memcpy(dup, s, len);
+	dup[len] = '\0';
+	return (dup);
 }
