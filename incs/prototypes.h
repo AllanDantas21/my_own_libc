@@ -11,6 +11,7 @@ int		my_isprint(const int i);
 int		my_tolower(int c);
 int		my_toupper(int ch);
 int		my_atoi(const char *str);
+int     my_strcmp(const char *s1, const char *s2);
 int     my_strncmp(const char *restrict s1, const char *restrict s2, size_t n);
 int		my_memcmp(const void *s1, const void *s2, size_t n);
 int     my_atoi_base(char *str, char *base);
