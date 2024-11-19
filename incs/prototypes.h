@@ -30,6 +30,7 @@ char	**my_split(char const *s, char c);
 char	**my_split_charset(char *str, char *charset);
 char	*my_strdup(const char *s1);
 char	*my_itoa(int n);
+char    *my_strcpy(char *dest, const char *src);
 size_t	my_strlcpy(char *dest, const char *src, size_t n);
 size_t	my_strlcat(char *dest, const char *src, size_t size);
 size_t	my_strlen(const char *str);
