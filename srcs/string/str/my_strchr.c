@@ -2,18 +2,15 @@
 
 char	*my_strchr(const char *s, int c)
 {
-	unsigned char	*a;
+	unsigned char	uc = (unsigned char)c;
 
-	if (c > 127)
-		c %= 256;
-	a = (unsigned char *) s;
-	while (*a)
+	while (*s)
 	{
-		if (*a == (unsigned char)c)
-			return ((char *)(a));
-		a++;
+		if ((unsigned char)*s == uc)
+			return ((char *)s);
+		s++;
 	}
-	if (*a == c)
-		return ((char *)(a));
+	if ((unsigned char)*s == uc)
+		return ((char *)s);
 	return (NULL);
 }
