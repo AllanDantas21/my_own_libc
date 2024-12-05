@@ -15,11 +15,11 @@ void my_list_sort(t_list **begin_list, int (*cmp)())
         j = i->next;
         while (j)
         {
-            if ((*cmp)(i->data, j->data) > 0)
+            if ((*cmp)(i->content, j->content) > 0)
             {
-                temp = i->data;
-                i->data = j->data;
-                j->data = temp;
+                temp = i->content;
+                i->content = j->content;
+                j->content = temp;
             }
             j = j->next;
         }

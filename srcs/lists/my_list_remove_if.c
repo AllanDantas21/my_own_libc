@@ -9,9 +9,9 @@ void my_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (
     while (*begin_list)
     {
         next = (*begin_list)->next;
-        if (!cmp((*begin_list)->data, data_ref))
+        if (!cmp((*begin_list)->content, data_ref))
         {
-            free_fct((*begin_list)->data);
+            free_fct((*begin_list)->content);
             if (prev)
                 prev->next = next;
             else
