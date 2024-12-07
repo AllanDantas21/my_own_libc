@@ -67,3 +67,67 @@ int main(void) {
     RUN_TEST(test_my_strcmp_should_HandleEmptyStrings);
     return UNITY_END();
 }
+// Prototypes for additional functions to be tested
+char* my_strcat(char *dest, const char *src);
+char* my_strncat(char *dest, const char *src, size_t n);
+char* my_strdup(const char *str);
+
+// Tests for my_strcat
+void test_my_strcat_should_ConcatenateStringsCorrectly(void) {
+    char dest[20] = "Hello";
+    TEST_ASSERT_EQUAL_STRING("Hello World", my_strcat(dest, " World"));
+}
+
+void test_my_strcat_should_HandleEmptySourceString(void) {
+    char dest[20] = "Hello";
+    TEST_ASSERT_EQUAL_STRING("Hello", my_strcat(dest, ""));
+}
+
+// Tests for my_strncat
+void test_my_strncat_should_ConcatenateNCharactersCorrectly(void) {
+    char dest[20] = "Hello";
+    TEST_ASSERT_EQUAL_STRING("Hello Wo", my_strncat(dest, " World", 3));
+}
+
+void test_my_strncat_should_HandleEmptySourceString(void) {
+    char dest[20] = "Hello";
+    TEST_ASSERT_EQUAL_STRING("Hello", my_strncat(dest, "", 3));
+}
+
+// Tests for my_strdup
+void test_my_strdup_should_DuplicateStringCorrectly(void) {
+    char *dup = my_strdup("Hello");
+    TEST_ASSERT_EQUAL_STRING("Hello", dup);
+    free(dup);
+}
+
+void test_my_strdup_should_HandleEmptyString(void) {
+    char *dup = my_strdup("");
+    TEST_ASSERT_EQUAL_STRING("", dup);
+    free(dup);
+}
+
+void test_my_strdup_should_HandleNullPointerGracefully(void) {
+    char *dup = my_strdup(NULL);
+    TEST_ASSERT_NULL(dup);
+}
+
+int main(void) {
+    UNITY_BEGIN();
+    RUN_TEST(test_my_strlen_should_ReturnZeroForEmptyString);
+    RUN_TEST(test_my_strlen_should_ReturnCorrectLengthForNonEmptyString);
+    RUN_TEST(test_my_strlen_should_HandleNullPointerGracefully);
+    RUN_TEST(test_my_strcpy_should_CopyStringCorrectly);
+    RUN_TEST(test_my_strcpy_should_HandleEmptySourceString);
+    RUN_TEST(test_my_strcmp_should_ReturnZeroForEqualStrings);
+    RUN_TEST(test_my_strcmp_should_ReturnNonZeroForDifferentStrings);
+    RUN_TEST(test_my_strcmp_should_HandleEmptyStrings);
+    RUN_TEST(test_my_strcat_should_ConcatenateStringsCorrectly);
+    RUN_TEST(test_my_strcat_should_HandleEmptySourceString);
+    RUN_TEST(test_my_strncat_should_ConcatenateNCharactersCorrectly);
+    RUN_TEST(test_my_strncat_should_HandleEmptySourceString);
+    RUN_TEST(test_my_strdup_should_DuplicateStringCorrectly);
+    RUN_TEST(test_my_strdup_should_HandleEmptyString);
+    RUN_TEST(test_my_strdup_should_HandleNullPointerGracefully);
+    return UNITY_END();
+}
