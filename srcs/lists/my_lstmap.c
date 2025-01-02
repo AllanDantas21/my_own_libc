@@ -1,5 +1,13 @@
 #include "my_libc.h"
 
+/**
+ * Applies a function to each element of a list and creates a new list.
+ * 
+ * @param lst Pointer to the list.
+ * @param f Function to apply to each element.
+ * @param del Function to delete an element.
+ * @return Pointer to the new list.
+ */
 t_list	*my_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
