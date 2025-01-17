@@ -70,6 +70,7 @@ void    my_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cm
 void btree_apply_suffix(t_btree *root, void (*applyf)(void *));
 void btree_apply_prefix(t_btree *root, void (*applyf)(void *));
 void btree_apply_infix(t_btree *root, void (*applyf)(void *));
+void btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *));
 
 // printf functions
 int     my_printf_address(void *pointer);

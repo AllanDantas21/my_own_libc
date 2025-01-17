@@ -12,27 +12,28 @@
  * @param tab Pointer to the array of integers to be sorted.
  * @param size The number of elements in the array.
  */
+
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int	c;
 	int	i;
 	int	swap;
+	int	sorted;
 
-	c = 0;
-	i = 0;
-	while (c <= size - 1)
+	while (1)
 	{
-		while (i < size - 1)
+		sorted = 1;
+		for (i = 0; i < size - 1; i++)
 		{
 			if (tab[i] > tab[i + 1])
 			{
 				swap = tab[i];
 				tab[i] = tab[i + 1];
 				tab[i + 1] = swap;
+				sorted = 0;
 			}
-			i++;
 		}
-		c++;
-		i = 0;
+		if (sorted)
+			break;
+		size--;
 	}
 }
