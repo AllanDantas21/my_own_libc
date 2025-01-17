@@ -1,6 +1,10 @@
 #ifndef prototypes_H
 # define prototypes_H
 
+/* Extern prototypes */
+#include "prots/btree_prots.h"
+#include "prots/printf_prots.h"
+
 /** Tests **/
 
 int		my_isalnum(const int i);
@@ -48,40 +52,5 @@ void	my_putnbr_fd(int n, int fd);
 void	my_striteri(char *s, void (*f)(unsigned int, char*));
 void	my_lstadd_back(t_list **lst, t_list *new);
 void	ft_rev_int_tab(int *tab, int size);
-t_list	*my_lstnew(void *content);
-t_list	*my_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*my_lstlast(t_list *lst);
-t_list  *my_list_at(t_list *begin_list, unsigned int nbr);
-t_list  *my_list_find(t_list *begin_list, void *data_ref, int (*cmp)());
-void    my_list_foreach_if(t_list *begin_list, void (*f)(void *), void *data_ref, int (*cmp)());
-void    my_list_foreach(t_list *begin_list, void (*f)(void *));
-void	my_lstiter(t_list *lst, void (*f)(void *));
-void	my_lstdelone(t_list *lst, void (*del)(void *));
-void	my_lstclear(t_list **lst, void (*del)(void *));
-void	my_lstadd_front(t_list **lst, t_list *new);
-void    my_list_reverse(t_list **begin_list);
-void    my_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (*free_fct)(void *));
-void    my_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)());
-void    my_list_merge(t_list **begin_list1, t_list *begin_list2);
-void    my_list_sort(t_list **begin_list, int (*cmp)());
-void    my_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cmp)());
-
-// btree functions
-void btree_apply_suffix(t_btree *root, void (*applyf)(void *));
-void btree_apply_prefix(t_btree *root, void (*applyf)(void *));
-void btree_apply_infix(t_btree *root, void (*applyf)(void *));
-void btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *));
-
-// printf functions
-int     my_printf_address(void *pointer);
-int     my_print_unsigned(unsigned int n);
-int     my_print_string(const char *str);
-int     my_print_hexa(unsigned int n);
-int     my_print_hexa_upper(unsigned int n);
-int     my_print_decimal(int decimal);
-int     my_print_char(char c);
-char	*utoa_base(unsigned long long n, int base, char *chr);
-
-// math functions
 
 #endif
